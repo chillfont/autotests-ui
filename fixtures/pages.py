@@ -9,8 +9,8 @@ from pages.registration_page import RegistrationPage
 
 
 @pytest.fixture
-def login_page(chromium_page_with_state: Page) -> LoginPage:
-    return LoginPage(page=chromium_page_with_state)
+def login_page(chromium_page: Page) -> LoginPage:
+    return LoginPage(page=chromium_page)
 
 
 @pytest.fixture

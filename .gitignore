@@ -1,0 +1,8 @@
+# Игнорировать папку __pycache__ и все её содержимое
+__pycache__/
+
+# Игнорировать все файлы с расширением .pyc
+*.pyc
+
+# Игнорировать файл browser_state.json
+browser_state.json

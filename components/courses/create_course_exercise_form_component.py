@@ -3,7 +3,7 @@ from playwright.sync_api import expect
 from components.base_component import BaseComponent
 
 
-class CreateCourseExercisesFormComponent(BaseComponent):
+class CreateCourseExerciseFormComponent(BaseComponent):
     def click_delete_button(self, index: int):
         delete_button = self.page.get_by_test_id(
             f'create-course-exercise-{index}-box-toolbar-delete-exercise-button'

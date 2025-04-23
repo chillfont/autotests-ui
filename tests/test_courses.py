@@ -22,8 +22,7 @@ def test_create_course(courses_list_page: CoursesListPage, create_course_page: C
     create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
     # Проверяем страницу создания курса
-    create_course_page.check_visible_create_course_title()
-    create_course_page.check_disabled_create_course_button()
+    create_course_page.check_visible_create_course_toolbar()
     create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
     create_course_page.check_visible_create_course_form(
         title="", estimated_time="", description="", max_score="0", min_score="0"
