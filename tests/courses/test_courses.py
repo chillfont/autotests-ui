@@ -44,3 +44,32 @@ class TestCourses:
         courses_list_page.course_view.check_visible(
             title="Playwright", index=0, max_score="100", min_score="10", estimated_time="2 weeks"
         )
+
+    def test_edit_course(self, create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
+        create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
+
+        # Загружаем превью курса, заполняем форму создания курса валидными данными и нажимаем на кнопку создания курса
+        create_course_page.image_upload_widget.upload_preview_image(file="./testdata/files/image.png")
+        create_course_page.fill_create_course_form(
+            title="Playwright", estimated_time="2 weeks", description="Playwright", max_score="100", min_score="10"
+        )
+        create_course_page.click_create_course_button()
+
+        # Проверяем, что на странице Courses отображается карточка ранее созданного курса
+        courses_list_page.course_view.check_visible(
+            title="Playwright", index=0, max_score="100", min_score="10", estimated_time="2 weeks"
+        )
+
+        # Вызываем форму редактирования курса
+        courses_list_page.course_view.menu.click_edit(index=0)
+
+        # Изменяем значения в форме редактирования курса
+        create_course_page.fill_create_course_form(
+            title="Python", estimated_time="4 weeks", description="Python", max_score="200", min_score="20"
+        )
+        create_course_page.click_create_course_button()
+
+        # Проверяем, что на странице Courses отображается курса с обновленными данными
+        courses_list_page.course_view.check_visible(
+            title="Python", index=0, max_score="200", min_score="20", estimated_time="4 weeks"
+        )
