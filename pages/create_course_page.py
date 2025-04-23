@@ -21,9 +21,6 @@ class CreateCoursePage(BasePage):
         self.exercises_title = page.get_by_test_id('create-course-exercises-box-toolbar-title-text')
         self.create_exercise_button = page.get_by_test_id('create-course-exercises-box-toolbar-create-exercise-button')
 
-    def check_visible_create_course_toolbar(self, is_create_course_disabled: bool = True):
-        self.create_course_toolbar.check_visible(is_create_course_disabled)
-
     def click_create_course_button(self):
         self.create_course_toolbar.click_create_course_button()
 
