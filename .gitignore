@@ -6,3 +6,6 @@ __pycache__/
 
 # Игнорировать файл browser_state.json
 browser_state.json
+
+# Игнорировать папку allure-results и все её содержимое
+allure-results/
