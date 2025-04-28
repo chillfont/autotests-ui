@@ -12,3 +12,6 @@ allure-results/
 
 # Игнорировать папку tracing и все её содержимое
 tracing/
+
+# Игнорировать папку videos и все её содержимое
+videos/
