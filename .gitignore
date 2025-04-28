@@ -9,3 +9,6 @@ browser_state.json
 
 # Игнорировать папку allure-results и все её содержимое
 allure-results/
+
+# Игнорировать папку tracing и все её содержимое
+tracing/
