@@ -23,7 +23,7 @@ class CreateCourseExerciseFormComponent(BaseComponent):
     def click_delete_button(self, index: int):
         self.delete_exercise_button.click(index=index)
 
-    @allure.step('Check visible create course exercise form at index"{index}"')
+    @allure.step('Check visible create course exercise form at index "{index}"')
     def check_visible(self, index: int, title: str, description: str):
         self.subtitle.check_visible(index=index)
         self.subtitle.check_have_text(f'#{index + 1} Exercise', index=index)
