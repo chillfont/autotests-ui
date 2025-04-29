@@ -1,17 +1,16 @@
-# Игнорировать папку __pycache__ и все её содержимое
-__pycache__/
+# PyCharm
+.idea
 
-# Игнорировать все файлы с расширением .pyc
-*.pyc
+# Python
+venv
+__pycache__
 
-# Игнорировать файл browser_state.json
-browser_state.json
+#allure
+allure-results
+allure-report
 
-# Игнорировать папку allure-results и все её содержимое
-allure-results/
-
-# Игнорировать папку tracing и все её содержимое
-tracing/
-
-# Игнорировать папку videos и все её содержимое
-videos/
+# Testing artifacts
+*.html
+*.json
+videos
+tracing
